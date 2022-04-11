@@ -1,0 +1,18 @@
+﻿using GartnerDevelopmentTest.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GartnerDevelopmentTest.SqlRepositories
+{
+    internal static class MysqlWriter //: ISqlWriter - Can be added later and abstracted for new Database model
+    {
+        
+        public static void Write(List<MySqlRowEntity> entities)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
