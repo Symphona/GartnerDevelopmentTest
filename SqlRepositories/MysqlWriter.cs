@@ -12,7 +12,7 @@ namespace GartnerDevelopmentTest.SqlRepositories
         
         public static void Write(List<MySqlRowEntity> entities)
         {
-            //TODO
+            //TODO - Ensure updating any existing information is handled, if needed
             throw new NotImplementedException();
         }
     }

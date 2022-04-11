@@ -35,7 +35,10 @@ namespace GartnerDevelopmentTest
             {
                 var inputData = reader.Read(args[1]);
 
-                MysqlWriter.Write(inputData);
+                //Echo example line
+                Console.WriteLine($"First result: Name: {inputData[0].Name}, Twitter: {inputData[0].Twitter}, Tags: {string.Join(',', inputData[0].Tags)}");
+
+                MysqlWriter.Write(inputData); //TODO
             }
             catch(Exception ex)
             {
