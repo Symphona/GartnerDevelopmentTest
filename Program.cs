@@ -13,7 +13,7 @@ namespace GartnerDevelopmentTest
                 return 1;
             }
 
-            IFileReader reader = null;
+            IFileReader reader;
 
             switch (args[0])
             {
@@ -26,7 +26,7 @@ namespace GartnerDevelopmentTest
                     reader = new SoftwareAdviceFileReader();
                     break;
                 default:
-                    Console.WriteLine($"Expected product in: capterra, softwareadvice}");
+                    Console.WriteLine($"Expected product in: capterra, softwareadvice");
                     return 1;
             }
 
@@ -42,7 +42,6 @@ namespace GartnerDevelopmentTest
                 Console.WriteLine(ex.Message);
                 return 1;
             }
-
 
             return 0;
         }

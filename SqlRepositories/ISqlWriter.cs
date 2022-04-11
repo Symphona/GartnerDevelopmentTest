@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace GartnerDevelopmentTest.SqlRepositories
 {
+    /// <summary>
+    /// Unused, created as an example for if a new Database engine is selected
+    /// </summary>
     public interface ISqlWriter
     {
         public void Write(List<MySqlRowEntity> entities);

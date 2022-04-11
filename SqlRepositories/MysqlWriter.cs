@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace GartnerDevelopmentTest.SqlRepositories
 {
-    internal static class MysqlWriter //: ISqlWriter - Can be added later and abstracted for new Database model
+    public static class MysqlWriter //: ISqlWriter - Can be added later and abstracted for new Database model
     {
         
         public static void Write(List<MySqlRowEntity> entities)
         {
+            //TODO
             throw new NotImplementedException();
         }
     }

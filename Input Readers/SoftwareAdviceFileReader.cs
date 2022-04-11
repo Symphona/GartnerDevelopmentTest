@@ -1,17 +1,20 @@
 ﻿using GartnerDevelopmentTest.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace GartnerDevelopmentTest.Input_Readers
 {
-    internal class SoftwareAdviceFileReader : IFileReader
+    public class SoftwareAdviceFileReader : IFileReader
     {
         List<MySqlRowEntity> IFileReader.Read(string v)
         {
-            throw new NotImplementedException();
+            var entity = JsonSerializer.Deserialize<SoftwareAdviceJsonEntity>(File.ReadAllText(v));
+
+            if (entity == null)
+                throw new Exception("File is empty");
+
+            return entity.products
+                .Select(prod => new MySqlRowEntity(prod.categories, prod.title, prod.twitter))
+                .ToList();
         }
     }
 }

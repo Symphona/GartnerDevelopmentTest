@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GartnerDevelopmentTest.Input_Readers
 {
-    internal interface IFileReader
+    public interface IFileReader
     {
         List<MySqlRowEntity> Read(string v);
     }
